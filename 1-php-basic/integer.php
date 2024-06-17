@@ -6,7 +6,7 @@ $b = 1.23;
 print(is_int($b));
 echo "\n";
 print(is_float($b));
-echo "\n";
+// echo "\n";
 
 // var_dump($a);
 // var_dump($b);
@@ -14,3 +14,14 @@ echo "\n";
 // print(PHP_INT_SIZE);
 // print(PHP_INT_MAX);
 // print(PHP_INT_MIN);
+
+echo rand(1,10);
+echo "\n";
+echo rand(1,10);
+echo "\n";
+echo rand(1,10);
+echo "\n";
+echo rand(1,10);
+echo "\n";
+echo rand(1,10);
+echo "\n";
