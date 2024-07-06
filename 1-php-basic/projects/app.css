@@ -826,6 +826,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1030,6 +1034,10 @@ video {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.font-mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1161,6 +1169,11 @@ video {
 
 .\[--auto-close\:lg\]{
   --auto-close: lg;
+}
+
+.hover\:border-blue-600:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 
 .hover\:bg-blue-700:hover{
@@ -1306,6 +1319,11 @@ video {
 .dark\:placeholder-neutral-500:is(.dark *)::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(115 115 115 / var(--tw-placeholder-opacity));
+}
+
+.dark\:hover\:border-blue-600:hover:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 
 .dark\:hover\:bg-neutral-700:hover:is(.dark *){
