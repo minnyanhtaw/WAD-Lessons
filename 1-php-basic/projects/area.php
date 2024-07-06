@@ -1,3 +1,18 @@
+<?php
+// print_r($_POST);
+// var_dump(empty($_POST["home_width"]));
+// var_dump(empty($_POST["home_breadth"]));
+// var_dump(empty($_POST["calc_btn"]));
+
+// die("________it is finish ________");
+
+if (empty($_POST["home_width"]) || empty($_POST["home_breadth"])) {
+    // die("need all input");
+    header("Location:index.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,9 +90,6 @@
                 <li class="inline-flex items-center">
                     <a class="flex items-center text-black font-bold text-sm  hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500" href="#">
                         Area Calculator
-                        <svg class="flex-shrink-0 mx-2 overflow-visible size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
                     </a>
                 </li>
 
