@@ -85,7 +85,7 @@
       <hr class=" border-white my-3">
 
 
-      <form action="" method="post">
+      <form action="./area.php" method="post">
         <div class="max-w-sm mb-5">
           <label for="home_width" class="block text-sm font-medium mb-2 dark:text-white">Home Width</label>
           <input type="number" id="home_width" name="home_width" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
@@ -95,7 +95,7 @@
           <label for="home_breadth" class="block text-sm font-medium mb-2 dark:text-white">Home Breadth</label>
           <input type="number" id="home_breadth" name="home_breadth" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
         </div>
-        <button type="button" class="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none w-full justify-center">
+        <button type="submit" class="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none w-full justify-center">
           Calculate
         </button>
       </form>
