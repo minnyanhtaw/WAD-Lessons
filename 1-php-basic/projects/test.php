@@ -33,11 +33,11 @@ $fileStream = fopen($fileName, "r");
 // echo fgets($fileStream);
 // echo fgets($fileStream);
 
-while (!feof($fileStream)) {
-    echo fgets($fileStream);
-}
+// while (!feof($fileStream)) {
+//     echo fgets($fileStream);
+// }
 
-fclose($fileStream);
+// fclose($fileStream);
 // if (file_exists($fileName)) {
 //     touch($fileName);
 // }
@@ -53,3 +53,11 @@ fclose($fileStream);
 // $fileStream = fopen($fileName, "w");
 // fwrite($fileStream, "Htaw ");
 // fclose($fileStream);
+$content = file_get_contents("http://forex.cbm.gov.mm/api/latest");
+
+$data = json_decode($content);
+$rates = get_object_vars($data->rates);
+print_r($rates);
+foreach ($rates as $rate) {
+    print_r($rate);
+}
