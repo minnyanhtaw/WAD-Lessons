@@ -1,17 +1,20 @@
 <?php
+
 // print_r($_POST);
-// var_dump(empty($_POST["home_width"]));
-// var_dump(empty($_POST["home_breadth"]));
-// var_dump(empty($_POST["calc_btn"]));
 
-// die("________it is finish ________");
+$amount = $_POST["amount"];
+$from_currency = explode("-", $_POST["from_currency"]);
+$from_currency_name = $from_currency[0];
+$from_currency_rate = str_replace(",", "", $from_currency[1]);
 
-if (empty($_POST["home_width"]) || empty($_POST["home_breadth"])) {
-    // die("need all input");
-    header("Location:index.php");
-}
+$to_currency = explode("-", $_POST["to_currency"]);
+$to_currency_name = $to_currency[0];
+$to_currency_rate = str_replace(",", "", $to_currency[1]);
+
+$mmk = $amount * $from_currency_rate;
+$to = round($mmk / $to_currency_rate, 2);
+
 ?>
-
 
 <?php include("./template/header.php"); ?>
 <?php include("./template/sideBar.php"); ?>
@@ -47,16 +50,16 @@ if (empty($_POST["home_width"]) || empty($_POST["home_breadth"])) {
         touch($fileName);
     }
     $fileStream = fopen($fileName, "a");
-    fwrite($fileStream, "\n$width * $breadth = $area Sqft");
+    fwrite($fileStream, "\n$amount $from_currency_name = $to $to_currency_name");
     fclose($fileStream);
 
     ?>
     <p class=" text-center text-5xl mb-5">
-        <?= $area ?> Sqft
+        <?= round($to, 2) ?> <?= $to_currency_name ?>
     </p>
 
     <div class=" flex flex-col gap-4">
-        <a href="./index.php" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none w-full justify-center">
+        <a href="./exchange-calculator.php" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none w-full justify-center">
             Calculate Again
         </a>
 

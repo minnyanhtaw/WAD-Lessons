@@ -42,7 +42,7 @@
         }
     ?>
         <p class=" bg-white p-2 mb-3 rounded font-mono">
-            <?= $content ?> Sqft
+            <?= $content ?>
         </p>
     <?php endwhile; ?>
 
