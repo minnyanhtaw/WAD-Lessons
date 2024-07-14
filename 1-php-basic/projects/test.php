@@ -53,11 +53,13 @@ $fileStream = fopen($fileName, "r");
 // $fileStream = fopen($fileName, "w");
 // fwrite($fileStream, "Htaw ");
 // fclose($fileStream);
-$content = file_get_contents("http://forex.cbm.gov.mm/api/latest");
+// $content = file_get_contents("http://forex.cbm.gov.mm/api/latest");
 
-$data = json_decode($content);
-$rates = get_object_vars($data->rates);
-print_r($rates);
-foreach ($rates as $rate) {
-    print_r($rate);
-}
+// $data = json_decode($content);
+// $rates = get_object_vars($data->rates);
+// print_r($rates);
+// foreach ($rates as $rate) {
+//     print_r($rate);
+// }
+
+echo "san kyi tar";

@@ -632,10 +632,6 @@ video {
   grid-column: 1 / -1;
 }
 
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -679,6 +675,10 @@ video {
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
 }
 
 .block{
@@ -1017,12 +1017,12 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.pt-7{
-  padding-top: 1.75rem;
-}
-
 .pe-9{
   padding-inline-end: 2.25rem;
+}
+
+.pt-7{
+  padding-top: 1.75rem;
 }
 
 .text-center{
@@ -1122,6 +1122,12 @@ video {
   opacity: 0;
 }
 
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .blur{
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1151,6 +1157,29 @@ video {
 
 .\[--auto-close\:lg\]{
   --auto-close: lg;
+}
+
+.file\:me-4::file-selector-button{
+  margin-inline-end: 1rem;
+}
+
+.file\:border-0::file-selector-button{
+  border-width: 0px;
+}
+
+.file\:bg-gray-50::file-selector-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.file\:px-4::file-selector-button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.file\:py-3::file-selector-button{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .hover\:border-blue-600:hover{
@@ -1186,6 +1215,10 @@ video {
 .hover\:text-gray-600:hover{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.focus\:z-10:focus{
+  z-index: 10;
 }
 
 .focus\:border-blue-500:focus{
@@ -1305,6 +1338,16 @@ video {
 .dark\:placeholder-neutral-500:is(.dark *)::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(115 115 115 / var(--tw-placeholder-opacity));
+}
+
+.dark\:file\:bg-neutral-700:is(.dark *)::file-selector-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
+}
+
+.dark\:file\:text-neutral-400:is(.dark *)::file-selector-button{
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
 .dark\:hover\:border-blue-600:hover:is(.dark *){
