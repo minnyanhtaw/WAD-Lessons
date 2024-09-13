@@ -1195,6 +1195,10 @@ input:checked + .toggle-bg{
   margin-bottom: 1.5rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -1405,6 +1409,10 @@ input:checked + .toggle-bg{
 
 .flex-wrap{
   flex-wrap: wrap;
+}
+
+.place-items-center{
+  place-items: center;
 }
 
 .items-start{
@@ -1780,6 +1788,11 @@ input:checked + .toggle-bg{
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold{
