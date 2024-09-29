@@ -81,8 +81,9 @@
                             <label for="home-breadth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Home Breadth</label>
                             <input type="number" name="home_breadth" id="home_breadth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Breadth" />
                         </div>
-                        <div>
-                            <button type="submit" name="calc_btn" class="bg-blue-500 text-sm font-medium hover:bg-blue-700 text-white py-2 px-4 rounded">Calculate</button>
+                        <div class="flex gap-2">
+                            <button type="submit" name="calc_btn" class="bg-blue-500 text-sm font-medium hover:bg-white hover:text-black border border-blue-500 text-white py-2 px-4 rounded w-full">Calculate</button>
+                            <a href="./record-list.php" class="bg-white inline-flex justify-center text-sm font-medium hover:bg-blue-500 border border-blue-500 text-black hover:text-white py-2 px-4 rounded w-full">All Record</a>
                         </div>
                     </div>
                 </form>

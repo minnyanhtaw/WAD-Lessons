@@ -1,11 +1,3 @@
-<?php
-
-if (empty($_POST["home_width"]) || empty($_POST["home_breadth"])) {
-    die("Need All Input");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,40 +88,39 @@ if (empty($_POST["home_width"]) || empty($_POST["home_breadth"])) {
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <a href="./index.php"
-                                    class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">
-                                    Result</a>
+                                <a href="#"
+                                    class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Record
+                                    Lists</a>
                             </div>
                         </li>
                     </ol>
                 </nav>
                 <hr class=" border-white mb-5">
+                <div class="px-4 ">
+                    <?php
+                    $fileName = "saveRecord.txt";
 
-                <?php
+                    if (!file_exists($fileName)) {
+                        touch($fileName);
+                    }
 
-                $width = $_POST["home_width"];
-                $breadth = $_POST["home_breadth"];
+                    $fileStream = fopen($fileName, "r");
 
-                $area = $width * $breadth;
+                    while (!feof($fileStream)) :
+                        $record = fgets($fileStream);
+                        if ($record === "\n")
+                            continue;
 
-                $fileName = "saveRecord.txt";
-                if (!file_exists($fileName)) {
-                    touch($fileName);
-                }
-
-                $fileStream = fopen($fileName, "a+");
-                fwrite($fileStream, "\n$width * $breadth = $area");
-                fclose($fileStream);
-                ?>
-
-                <div class="px-4">
-                    <p class="text-3xl text-center font-bold mb-5"> <?= $area ?> Sqft</p>
-                    <div class="flex items-center gap-2">
-                        <a href="./index.php"
-                            class="bg-blue-500 text-sm inline-flex justify-center font-medium hover:bg-white hover:text-black border border-blue-500 text-white py-2 px-4 rounded w-full">Calculate again</a>
-                        <a href="./record-list.php"
-                            class="bg-white inline-flex justify-center text-sm font-medium hover:bg-blue-500 border border-blue-500 text-black hover:text-white py-2 px-4 rounded w-full">All Records</a>
-                    </div>
+                    ?>
+                        <p class="font-bold p-2 bg-white mb-2 rounded font-mono">
+                            <?= $record ?>
+                        </p>
+                    <?php
+                    endwhile;
+                    fclose($fileStream);
+                    ?>
+                    <a href="./index.php"
+                        class="px-4 block text-center py-2 w-full bg-blue-500 text-white rounded-lg mt-5">Calculate again</a>
                 </div>
             </div>
         </section>
