@@ -1137,6 +1137,10 @@ input:checked + .toggle-bg{
   z-index: 50;
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1181,6 +1185,10 @@ input:checked + .toggle-bg{
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .block{
@@ -1338,6 +1346,10 @@ input:checked + .toggle-bg{
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .items-start{
   align-items: flex-start;
 }
@@ -1376,6 +1388,10 @@ input:checked + .toggle-bg{
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-4{
+  gap: 1rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
