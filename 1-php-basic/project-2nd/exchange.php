@@ -30,10 +30,10 @@
 
         <?php
 
-        $content = file_get_contents("http://forex.cbm.gov.mm/api/latest");
+        $content = file_get_contents("http://forex.cbm.gov.mm/api/latest", true);
         echo $content;
         $obj = json_decode($content);
-        
+
 
         ?>
 
